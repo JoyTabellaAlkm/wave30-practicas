@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellidos": "Martinez",
+      "edad": "22",
+      "cursos_list": [
+        {
+        "id": 101,
+        "nombre": "Matemáticas"
+       },
+        {
+          "id": 102,
+          "nombre": "Historia"
+        }
+      ]
+    },
+     {
+    "id": 2,
+    "nombre": "Laura",
+    "apellidos": "Lopez",
+    "edad": "24",
+    "cursos_list": [
+      {
+        "id": 303,
+        "nombre": "Programacion"
+      },
+      {
+        "id": 102,
+        "nombre": "Historia"
+      }
+    ]
+    }
+]
