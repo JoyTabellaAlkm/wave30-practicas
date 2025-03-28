@@ -41,7 +41,6 @@ public class CalculadoraPromedioControllerTest {
     @InjectMocks //Siempre es la clase ya que tiene el constructor
     private CalculadoraPromedioController calculadoraPromedioController;
 
-    //  public ResponseEntity<Double> promedioDeAlumno(@PathVariable Integer id){
     @Test
     @DisplayName(" 01 - Test Controller : promedio de Alumno OK")
     public void promedioDeAlumnoTestOK() {

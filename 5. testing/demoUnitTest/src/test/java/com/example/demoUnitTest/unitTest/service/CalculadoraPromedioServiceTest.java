@@ -60,7 +60,6 @@ public class CalculadoraPromedioServiceTest {
 
         //ACT
         when(AlumnoRepositoryImpl.findById(idDeEntrada)).thenReturn(alumnoDeEntrada);
-        //Mockito.when(AlumnoRepositoryImpl.findById(15)).thenReturn(alumnoDeEntrada2);
         Double promedioObtenido = calculadoraPromedioService.promedioDeAlumno(idDeEntrada);
 
 

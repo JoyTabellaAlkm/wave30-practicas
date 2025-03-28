@@ -19,9 +19,9 @@ public class CalculadoraPromedioController {
     private ICalculadoraPromedioService calculadoraPromedioService;
 
     //SUMAR dos numeros
-    @GetMapping("/sumar/{n1}/{n2}")
-    public ResponseEntity<Double> sumar(@PathVariable @Positive(message = "El valor debe ser POSITIVO" ) Double n1,
-                                        @PathVariable @Positive Double n2){
+    @GetMapping("/sumar")
+    public ResponseEntity<Double> sumar(@RequestParam @Positive(message = "El valor debe ser POSITIVO" ) Double n1,
+                                        @RequestParam @Positive Double n2){
         return new ResponseEntity<>(calculadoraPromedioService.sumar(n1, n2), HttpStatus.OK);
     }
 

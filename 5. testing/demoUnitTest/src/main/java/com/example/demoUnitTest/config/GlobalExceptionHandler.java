@@ -1,8 +1,11 @@
 package com.example.demoUnitTest.config;
 
 import com.example.demoUnitTest.dto.ErrorDTO;
+import com.example.demoUnitTest.dto.ExcepcionDTO;
+import com.example.demoUnitTest.excepcion.NotFoundException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -37,6 +40,11 @@ public class GlobalExceptionHandler {
                 )
 
         );
+    }
+
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity<ExcepcionDTO> notFoundException(NotFoundException e){
+        return new ResponseEntity<>(new ExcepcionDTO(e.getMessage()), HttpStatus.NOT_FOUND);
     }
 
 

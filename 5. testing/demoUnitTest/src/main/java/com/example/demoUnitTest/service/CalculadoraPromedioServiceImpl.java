@@ -2,6 +2,7 @@ package com.example.demoUnitTest.service;
 
 import com.example.demoUnitTest.dto.AlumnoDTO;
 import com.example.demoUnitTest.dto.ResponseDTO;
+import com.example.demoUnitTest.excepcion.NotFoundException;
 import com.example.demoUnitTest.model.Alumno;
 import com.example.demoUnitTest.repository.IAlumnoRepository;
 import org.modelmapper.ModelMapper;
@@ -34,7 +35,7 @@ public class CalculadoraPromedioServiceImpl implements ICalculadoraPromedioServi
             return promedio(alumno.getCursosList().get(0).getPromedioCurso(),
                     alumno.getCursosList().get(1).getPromedioCurso());
         } else {
-            throw new RuntimeException("Alumno no encontrado");
+            throw new NotFoundException("Alumno no encontrado");
         }
 
     }
